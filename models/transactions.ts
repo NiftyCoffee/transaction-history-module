@@ -20,6 +20,7 @@ type Transaction = {
     date: Date;
     category: string;
     desc: string;
+    type: string;
 };
 
 // Sample Transaction data
@@ -37,12 +38,14 @@ const generateTransaction = (): Transaction => {
     const date = new Date();
     const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
     const desc = `Transaction ${transactionHistory.length + 1}`;
+    const type = Math.floor(Math.random() * 2) === 0 ? "debit" : "credit";
 
     const newTransaction = {
         amount: amount,
         date: date,
         category: category,
-        desc: desc
+        desc: desc,
+        type: type
     };
 
     return newTransaction;
