@@ -1,0 +1,122 @@
+[
+  {
+    "amount": 92,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 1"
+  },
+  {
+    "amount": 96,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 2"
+  },
+  {
+    "amount": 69,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 3"
+  },
+  {
+    "amount": 50,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 4"
+  },
+  {
+    "amount": 90,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 5"
+  },
+  {
+    "amount": 71,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 6"
+  },
+  {
+    "amount": 10,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 7"
+  },
+  {
+    "amount": 70,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 8"
+  },
+  {
+    "amount": 37,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 9"
+  },
+  {
+    "amount": 34,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 10"
+  },
+  {
+    "amount": 89,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 11"
+  },
+  {
+    "amount": 64,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 12"
+  },
+  {
+    "amount": 51,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 13"
+  },
+  {
+    "amount": 20,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 14"
+  },
+  {
+    "amount": 73,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Transportation",
+    "desc": "Transaction 15"
+  },
+  {
+    "amount": 85,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 16"
+  },
+  {
+    "amount": 52,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 17"
+  },
+  {
+    "amount": 60,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 18"
+  },
+  {
+    "amount": 91,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Grocery",
+    "desc": "Transaction 19"
+  },
+  {
+    "amount": 85,
+    "date": "2024-11-27T04:39:36.964Z",
+    "category": "Food",
+    "desc": "Transaction 20"
+  }
+]
