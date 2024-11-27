@@ -5,17 +5,20 @@ import path from 'path';
 
 // Transaction categories
 const CATEGORIES = [
-    'Grocery',
+    'Groceries',
     'Transportation',
-    'Food'
+    'Food',
+    'Shopping',
+    'Salary',
 ];
 
 // Price ranges
-const LOW_RANGE = 1;
-const HIGH_RANGE = 100;
+const MIN_EXPENSE = 1;
+const MAX_EXPENSE = 100;
+const SALARY = 6000;
 
 // TRANSACTION MODEL
-type Transaction = {
+export type Transaction = {
     amount: number;
     date: Date;
     category: string;
@@ -34,13 +37,15 @@ const transactionHistory: Transaction[] = [];
  */
 const generateTransaction = (): Transaction => {
     // Randomly generate transaction details
-    const amount = Math.floor(Math.random() * HIGH_RANGE) + LOW_RANGE;
     const date = new Date();
     const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
     const desc = `Transaction ${transactionHistory.length + 1}`;
-    const type = Math.floor(Math.random() * 2) === 0 ? "debit" : "credit";
 
-    const newTransaction = {
+    // Generate type and amount according to category
+    const type = category === "Salary" ? "credit" : "debit";
+    const amount = category === "Salary" ? SALARY : Math.floor(Math.random() * MAX_EXPENSE) + MIN_EXPENSE;
+
+    const newTransaction: Transaction = {
         amount: amount,
         date: date,
         category: category,

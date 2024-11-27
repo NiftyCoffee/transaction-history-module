@@ -1,141 +1,141 @@
 [
   {
-    "amount": 31,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Food",
+    "amount": 84,
+    "date": "2024-11-27T11:58:56.706Z",
+    "category": "Shopping",
     "desc": "Transaction 1",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 61,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 93,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Shopping",
     "desc": "Transaction 2",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 33,
-    "date": "2024-11-27T04:50:01.765Z",
+    "amount": 37,
+    "date": "2024-11-27T11:58:56.707Z",
     "category": "Food",
     "desc": "Transaction 3",
     "type": "debit"
   },
   {
-    "amount": 11,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 6000,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Salary",
     "desc": "Transaction 4",
-    "type": "debit"
+    "type": "credit"
   },
   {
-    "amount": 35,
-    "date": "2024-11-27T04:50:01.765Z",
+    "amount": 61,
+    "date": "2024-11-27T11:58:56.707Z",
     "category": "Transportation",
     "desc": "Transaction 5",
     "type": "debit"
   },
   {
-    "amount": 68,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 1,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Food",
     "desc": "Transaction 6",
     "type": "debit"
   },
   {
-    "amount": 10,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 6000,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Salary",
     "desc": "Transaction 7",
     "type": "credit"
   },
   {
-    "amount": 23,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 58,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Groceries",
     "desc": "Transaction 8",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 34,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 45,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Shopping",
     "desc": "Transaction 9",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 84,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 29,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Food",
     "desc": "Transaction 10",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 59,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 27,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Groceries",
     "desc": "Transaction 11",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 2,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 6000,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Salary",
     "desc": "Transaction 12",
     "type": "credit"
   },
   {
-    "amount": 13,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 6000,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Salary",
     "desc": "Transaction 13",
     "type": "credit"
   },
   {
-    "amount": 36,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 68,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Groceries",
     "desc": "Transaction 14",
     "type": "debit"
   },
   {
-    "amount": 95,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Transportation",
+    "amount": 6,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Food",
     "desc": "Transaction 15",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 8,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 63,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Shopping",
     "desc": "Transaction 16",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 82,
-    "date": "2024-11-27T04:50:01.765Z",
+    "amount": 15,
+    "date": "2024-11-27T11:58:56.707Z",
     "category": "Transportation",
     "desc": "Transaction 17",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 78,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 70,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Transportation",
     "desc": "Transaction 18",
-    "type": "credit"
+    "type": "debit"
   },
   {
-    "amount": 56,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Food",
+    "amount": 94,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Groceries",
     "desc": "Transaction 19",
     "type": "debit"
   },
   {
-    "amount": 34,
-    "date": "2024-11-27T04:50:01.765Z",
-    "category": "Grocery",
+    "amount": 28,
+    "date": "2024-11-27T11:58:56.707Z",
+    "category": "Transportation",
     "desc": "Transaction 20",
     "type": "debit"
   }
