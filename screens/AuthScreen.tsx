@@ -42,6 +42,8 @@ const AuthScreen = ({ onAuthenticated }: { onAuthenticated: () => void }) => {
             if (result.success) {
                 // If successful, set authenticated variable to true via prop passed by parent
                 onAuthenticated();
+            } else {
+                Alert.alert("Authentication failed. Please try again.");
             }
         } catch (error) {
             console.error(error);
