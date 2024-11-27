@@ -4,8 +4,22 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import AuthScreen from './screens/AuthScreen';
 import { useState } from 'react';
+import transactions from './data/transactions.json';
+import { Transaction } from './models/transactions';
 
-const RootStack = createNativeStackNavigator();
+type StackParams = {
+  Home: { transactions: Transaction[] };
+}
+
+const Stack = createNativeStackNavigator<StackParams>();
+
+// Format date string back to date to match type
+const formattedTransactions: Transaction[] = transactions.map((transaction: any) => {
+  return {
+    ...transaction,
+    date: new Date(transaction.date)
+  };
+});
 
 export default function App() {
   // Keep track of authentication status
@@ -22,9 +36,13 @@ export default function App() {
     <NavigationContainer>
       {authenticated ? (
         // If authenticated, serve home page
-        <RootStack.Navigator initialRouteName="Home">
-        <RootStack.Screen name="Home" component={HomeScreen} />
-        </RootStack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen 
+        name="Home" 
+        component={HomeScreen}
+        initialParams={{ transactions: formattedTransactions }}
+        />
+        </Stack.Navigator>
       ) : (
         // If not authenticated, perform authentication process
         <AuthScreen onAuthenticated={handleAuthentication} />

@@ -1,9 +1,16 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, FlatList } from "react-native";
+import { Transaction } from "../models/transactions";
+import TransactionView from "../components/TransactionView";
 
-const HomeScreen = () => {
+const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] } } }) => {
+    const { transactions } = route.params;
+
     return (
         <View style={styles.container}>
-            <Text>Home Screen</Text>
+            <FlatList 
+            data={transactions}
+            renderItem={({item}) => <TransactionView transaction={item} />}
+             />
         </View>
     )
 }
