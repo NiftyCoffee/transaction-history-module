@@ -6,10 +6,12 @@ import AuthScreen from './screens/AuthScreen';
 import { useState } from 'react';
 import transactions from './data/transactions.json';
 import { Transaction } from './models/transactions';
+import TransactionDetailsScreen from './screens/TransactionDetailsScreen';
 
 type StackParams = {
   Home: { transactions: Transaction[] };
-}
+  "Transaction Details": { transaction: Transaction };
+};
 
 const Stack = createNativeStackNavigator<StackParams>();
 
@@ -37,11 +39,15 @@ export default function App() {
       {authenticated ? (
         // If authenticated, serve home page
         <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen 
-        name="Home" 
-        component={HomeScreen}
-        initialParams={{ transactions: formattedTransactions }}
-        />
+          <Stack.Screen 
+          name="Home" 
+          component={HomeScreen}
+          initialParams={{ transactions: formattedTransactions }}
+          />
+          <Stack.Screen
+          name="Transaction Details"
+          component={TransactionDetailsScreen}
+          />
         </Stack.Navigator>
       ) : (
         // If not authenticated, perform authentication process

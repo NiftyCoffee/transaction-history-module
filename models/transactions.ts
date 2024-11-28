@@ -37,13 +37,13 @@ const transactionHistory: Transaction[] = [];
  */
 const generateTransaction = (): Transaction => {
     // Randomly generate transaction details
-    const date = new Date();
+    const date = generateRandomDate(new Date(2024, 0, 1), new Date());
     const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
-    const desc = `Transaction ${transactionHistory.length + 1}`;
 
     // Generate type and amount according to category
     const type = category === "Salary" ? "credit" : "debit";
     const amount = category === "Salary" ? SALARY : Math.floor(Math.random() * MAX_EXPENSE) + MIN_EXPENSE;
+    const desc = category === "Salary" ? "Monthly salary" : `Spent $${amount}.00 on ${category}`;
 
     const newTransaction: Transaction = {
         amount: amount,
@@ -64,6 +64,23 @@ const populateHistory = (numTransactions: number): void => {
     for (let i = 0; i < numTransactions; i++) {
         transactionHistory.push(generateTransaction());
     }
+
+    // Sort transaction history by descending date
+    transactionHistory.sort((a, b) => b.date.getTime() - a.date.getTime());
+}
+
+/**
+ * Generates a random date within the given range
+ * @param start Start date
+ * @param end End date
+ * @returns A random date and timestamp in between start and end
+ */
+const generateRandomDate = (start: Date, end: Date): Date => {
+    const startTime = start.getTime();
+    const endTime = end.getTime();
+    const randomTime = Math.random() * (endTime - startTime) + startTime;
+
+    return new Date(randomTime);
 }
 
 /**

@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Transaction } from "../models/transactions";
 
 const TransactionView = ({ transaction }: { transaction: Transaction }) => {
@@ -14,7 +14,7 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
     : require("../assets/salary-icon.png");
 
     return (
-        <View style={styles.card}>
+        <TouchableOpacity style={styles.card}>
             <Image source={icon} style={styles.icon} />
             <View style={styles.container}>
                 <View>
@@ -23,7 +23,7 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
                 </View>
                 <Text style={styles.date}>{transaction.date.toLocaleDateString()}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
