@@ -7,9 +7,11 @@ import { useState } from 'react';
 import transactions from './data/transactions.json';
 import { Transaction } from './models/transactions';
 import TransactionDetailsScreen from './screens/TransactionDetailsScreen';
+import TransactionHistoryScreen from './screens/TransactionHistoryScreen';
 
 export type StackParams = {
   Home: { transactions: Transaction[] };
+  "All Transactions": { transactions: Transaction[] }
   "Transaction Details": { transaction: Transaction };
 };
 
@@ -46,6 +48,11 @@ export default function App() {
           <Stack.Screen 
           name="Home" 
           component={HomeScreen}
+          initialParams={{ transactions: formattedTransactions }}
+          />
+          <Stack.Screen
+          name="All Transactions"
+          component={TransactionHistoryScreen}
           initialParams={{ transactions: formattedTransactions }}
           />
           <Stack.Screen

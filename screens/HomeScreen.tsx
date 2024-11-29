@@ -1,15 +1,38 @@
-import { StyleSheet, View, Text, Button, ScrollView, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { Transaction } from "../models/transactions";
 import TransactionHistory from "../components/TransactionHistory";
 import { useEffect, useRef, useState } from "react";
 import MonthlyChart from "../components/MonthlyChart";
+import { useNavigation } from "@react-navigation/native";
+import { StackParams } from "../App";
+import { NavigationProp } from "@react-navigation/native";
+
+// Define navigation type for All Transactions
+type AllTransactionsNavigationProp = NavigationProp<
+    StackParams,
+    "All Transactions"
+>;
 
 const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] } } }) => {
     const { transactions } = route.params;
+    const navigation = useNavigation<AllTransactionsNavigationProp>();
 
     const [currentMonth, setCurrentMonth] = useState(transactions[0].date.getMonth());
     const [currentYear, setCurrentYear] = useState(transactions[0].date.getFullYear());
 
+    /**
+     * Navigate to All Transactions screen
+     */
+    const handleViewAll = (): void => {
+        navigation.navigate("All Transactions", { transactions });
+    }
+
+    /**
+     * Get all transactions that occurred in given month and year
+     * @param month Month to get transactions
+     * @param year Year to get transactions
+     * @returns List of transactions corresponding to given month and year
+     */
     const getMonthlyTransactions = (month: number, year: number): Transaction[] => {
         return transactions.filter(transaction => {
             const date = transaction.date;
@@ -19,6 +42,11 @@ const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] 
 
     const months = getLast12Months(transactions[0].date);
 
+    /**
+     * Handles user selecting a month from nav slider
+     * @param month Selected month
+     * @param year Selected year
+     */
     const handleSelectMonth = (month: number, year: number) => {
         setCurrentMonth(month);
         setCurrentYear(year);
@@ -36,8 +64,14 @@ const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] 
 
     return (
         <View style={styles.container}>
-            <Text style={styles.h1}>Welcome.</Text>
+            <Text style={styles.h1}>Welcome</Text>
             <MonthlyChart transactions={getMonthlyTransactions(currentMonth, currentYear)} />
+            <View style={styles.heading}>
+                <Text style={styles.headingText}>Monthly Transactions</Text>
+                <TouchableOpacity style={styles.headingButton} onPress={handleViewAll}>
+                    <Text>View All</Text>
+                </TouchableOpacity>
+            </View>
             <ScrollView 
             horizontal={true} 
             contentContainerStyle={styles.slider}
@@ -50,7 +84,7 @@ const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] 
                 </TouchableOpacity>
                 ))}
             </ScrollView>
-            <TransactionHistory transactions={getMonthlyTransactions(currentMonth, currentYear)} />
+                <TransactionHistory transactions={getMonthlyTransactions(currentMonth, currentYear)} />
         </View>
     )
 }
@@ -71,6 +105,24 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingTop: 20,
         paddingBottom: 20
+    },
+    heading: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingHorizontal: 20,
+        paddingTop: 15,
+        paddingBottom: 15,
+    },
+    headingText: {
+        fontSize: 20
+    },
+    headingButton: {
+        borderRadius: 20,
+        backgroundColor: "#d4d4d4",
+        paddingVertical: 10,
+        paddingHorizontal: 15
     },
     slider: {
         paddingHorizontal: 15,
