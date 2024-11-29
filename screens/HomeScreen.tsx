@@ -84,7 +84,9 @@ const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] 
                 </TouchableOpacity>
                 ))}
             </ScrollView>
+            <View style={styles.historyContainer}>
                 <TransactionHistory transactions={getMonthlyTransactions(currentMonth, currentYear)} />
+            </View>
         </View>
     )
 }
@@ -146,6 +148,9 @@ const styles = StyleSheet.create({
         borderStyle: "solid",
         borderWidth: 2,
         borderColor: "#9575ff",
+    },
+    historyContainer: {
+        maxHeight: "40%"
     }
 });
 
