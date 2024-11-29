@@ -1,4 +1,4 @@
-import { View } from "react-native"
+import { StyleSheet, View } from "react-native"
 import { Transaction } from "../models/transactions"
 import { VictoryAxis, VictoryBar, VictoryChart, VictoryLabel, VictoryTheme } from "victory-native";
 
@@ -27,7 +27,7 @@ const MonthlyChart = ({ transactions }: { transactions: Transaction[] }) => {
     ]
 
     return (
-        <View>
+        <View style={styles.container}>
             <VictoryChart 
                 theme={VictoryTheme.material}
                 domainPadding={85} 
@@ -37,6 +37,8 @@ const MonthlyChart = ({ transactions }: { transactions: Transaction[] }) => {
                     tickValues={["Income", "Expenses"]} 
                     tickFormat={["Income", "Expenses"]}
                     style={{ 
+                        grid: { stroke: "transparent" },
+                        ticks: { stroke: "transparent" },
                         tickLabels: { fontSize: 16 },
                         axis: { stroke: "transparent" }
                     }} />
@@ -46,12 +48,19 @@ const MonthlyChart = ({ transactions }: { transactions: Transaction[] }) => {
                     y="value"
                     style={{ data: { fill: "#9575ff" } }}
                     barWidth={60}
-                    labels={({ datum }) => datum.value}
+                    cornerRadius={5}
+                    labels={({ datum }) => datum.name === "Expenses" ? `-$${datum.value}` : `$${datum.value}`}
                     labelComponent={<VictoryLabel style={{ fontSize: 16 }} />}
                 />
             </VictoryChart>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        // flex: 1,
+    },
+});
 
 export default MonthlyChart;
