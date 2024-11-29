@@ -1,15 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import AuthScreen from './screens/AuthScreen';
 import { useState } from 'react';
 import transactions from './data/transactions.json';
 import { Transaction } from './models/transactions';
+import TransactionDetailsScreen from './screens/TransactionDetailsScreen';
 
 type StackParams = {
   Home: { transactions: Transaction[] };
-}
+  "Transaction Details": { transaction: Transaction };
+};
 
 const Stack = createNativeStackNavigator<StackParams>();
 
@@ -20,6 +22,10 @@ const formattedTransactions: Transaction[] = transactions.map((transaction: any)
     date: new Date(transaction.date)
   };
 });
+
+// Customize background color of app
+const navTheme = DefaultTheme;
+navTheme.colors.background = "#fff";
 
 export default function App() {
   // Keep track of authentication status
@@ -33,15 +39,19 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={navTheme}>
       {authenticated ? (
         // If authenticated, serve home page
         <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen 
-        name="Home" 
-        component={HomeScreen}
-        initialParams={{ transactions: formattedTransactions }}
-        />
+          <Stack.Screen 
+          name="Home" 
+          component={HomeScreen}
+          initialParams={{ transactions: formattedTransactions }}
+          />
+          <Stack.Screen
+          name="Transaction Details"
+          component={TransactionDetailsScreen}
+          />
         </Stack.Navigator>
       ) : (
         // If not authenticated, perform authentication process

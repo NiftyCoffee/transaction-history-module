@@ -1,142 +1,142 @@
 [
   {
-    "amount": 84,
-    "date": "2024-11-27T11:58:56.706Z",
-    "category": "Shopping",
-    "desc": "Transaction 1",
-    "type": "debit"
-  },
-  {
-    "amount": 93,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Shopping",
-    "desc": "Transaction 2",
-    "type": "debit"
-  },
-  {
-    "amount": 37,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Food",
-    "desc": "Transaction 3",
-    "type": "debit"
-  },
-  {
-    "amount": 6000,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Salary",
-    "desc": "Transaction 4",
-    "type": "credit"
-  },
-  {
-    "amount": 61,
-    "date": "2024-11-27T11:58:56.707Z",
+    "amount": 42,
+    "date": "2024-11-01T00:51:36.171Z",
     "category": "Transportation",
-    "desc": "Transaction 5",
+    "desc": "Spent $42.00 on Transportation",
     "type": "debit"
   },
   {
-    "amount": 1,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Food",
-    "desc": "Transaction 6",
+    "amount": 4,
+    "date": "2024-10-28T03:51:36.154Z",
+    "category": "Shopping",
+    "desc": "Spent $4.00 on Shopping",
     "type": "debit"
   },
   {
     "amount": 6000,
-    "date": "2024-11-27T11:58:56.707Z",
+    "date": "2024-10-25T13:33:35.377Z",
     "category": "Salary",
-    "desc": "Transaction 7",
+    "desc": "Monthly salary",
     "type": "credit"
   },
   {
-    "amount": 58,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Groceries",
-    "desc": "Transaction 8",
+    "amount": 91,
+    "date": "2024-10-23T10:07:54.665Z",
+    "category": "Shopping",
+    "desc": "Spent $91.00 on Shopping",
     "type": "debit"
   },
   {
-    "amount": 45,
-    "date": "2024-11-27T11:58:56.707Z",
+    "amount": 81,
+    "date": "2024-10-23T04:18:22.342Z",
+    "category": "Groceries",
+    "desc": "Spent $81.00 on Groceries",
+    "type": "debit"
+  },
+  {
+    "amount": 31,
+    "date": "2024-09-24T03:43:34.074Z",
+    "category": "Food",
+    "desc": "Spent $31.00 on Food",
+    "type": "debit"
+  },
+  {
+    "amount": 6000,
+    "date": "2024-09-21T17:13:27.115Z",
+    "category": "Salary",
+    "desc": "Monthly salary",
+    "type": "credit"
+  },
+  {
+    "amount": 64,
+    "date": "2024-09-13T04:22:31.527Z",
+    "category": "Groceries",
+    "desc": "Spent $64.00 on Groceries",
+    "type": "debit"
+  },
+  {
+    "amount": 52,
+    "date": "2024-09-04T03:58:56.715Z",
+    "category": "Food",
+    "desc": "Spent $52.00 on Food",
+    "type": "debit"
+  },
+  {
+    "amount": 84,
+    "date": "2024-08-26T12:48:23.861Z",
+    "category": "Food",
+    "desc": "Spent $84.00 on Food",
+    "type": "debit"
+  },
+  {
+    "amount": 83,
+    "date": "2024-08-24T15:08:09.949Z",
+    "category": "Groceries",
+    "desc": "Spent $83.00 on Groceries",
+    "type": "debit"
+  },
+  {
+    "amount": 8,
+    "date": "2024-08-23T04:26:06.317Z",
     "category": "Shopping",
-    "desc": "Transaction 9",
+    "desc": "Spent $8.00 on Shopping",
+    "type": "debit"
+  },
+  {
+    "amount": 36,
+    "date": "2024-07-17T07:21:19.403Z",
+    "category": "Shopping",
+    "desc": "Spent $36.00 on Shopping",
+    "type": "debit"
+  },
+  {
+    "amount": 35,
+    "date": "2024-07-07T23:10:46.262Z",
+    "category": "Groceries",
+    "desc": "Spent $35.00 on Groceries",
+    "type": "debit"
+  },
+  {
+    "amount": 34,
+    "date": "2024-07-01T21:02:23.011Z",
+    "category": "Shopping",
+    "desc": "Spent $34.00 on Shopping",
     "type": "debit"
   },
   {
     "amount": 29,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Food",
-    "desc": "Transaction 10",
-    "type": "debit"
-  },
-  {
-    "amount": 27,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Groceries",
-    "desc": "Transaction 11",
-    "type": "debit"
-  },
-  {
-    "amount": 6000,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Salary",
-    "desc": "Transaction 12",
-    "type": "credit"
-  },
-  {
-    "amount": 6000,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Salary",
-    "desc": "Transaction 13",
-    "type": "credit"
-  },
-  {
-    "amount": 68,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Groceries",
-    "desc": "Transaction 14",
-    "type": "debit"
-  },
-  {
-    "amount": 6,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Food",
-    "desc": "Transaction 15",
-    "type": "debit"
-  },
-  {
-    "amount": 63,
-    "date": "2024-11-27T11:58:56.707Z",
+    "date": "2024-06-26T12:31:06.355Z",
     "category": "Shopping",
-    "desc": "Transaction 16",
+    "desc": "Spent $29.00 on Shopping",
     "type": "debit"
   },
   {
-    "amount": 15,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Transportation",
-    "desc": "Transaction 17",
+    "amount": 6000,
+    "date": "2024-03-22T17:45:35.415Z",
+    "category": "Salary",
+    "desc": "Monthly salary",
+    "type": "credit"
+  },
+  {
+    "amount": 39,
+    "date": "2024-02-26T23:26:24.693Z",
+    "category": "Shopping",
+    "desc": "Spent $39.00 on Shopping",
     "type": "debit"
   },
   {
-    "amount": 70,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Transportation",
-    "desc": "Transaction 18",
+    "amount": 89,
+    "date": "2024-02-16T17:44:51.071Z",
+    "category": "Shopping",
+    "desc": "Spent $89.00 on Shopping",
     "type": "debit"
   },
   {
-    "amount": 94,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Groceries",
-    "desc": "Transaction 19",
-    "type": "debit"
-  },
-  {
-    "amount": 28,
-    "date": "2024-11-27T11:58:56.707Z",
-    "category": "Transportation",
-    "desc": "Transaction 20",
-    "type": "debit"
+    "amount": 6000,
+    "date": "2024-02-07T04:25:04.852Z",
+    "category": "Salary",
+    "desc": "Monthly salary",
+    "type": "credit"
   }
 ]
