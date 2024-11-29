@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { StyleSheet, View, Text, Alert, Button } from "react-native";
+import { StyleSheet, View, Text, Alert, Button, TouchableOpacity } from "react-native";
 import * as LocalAuthentication from "expo-local-authentication";
 
 const AuthScreen = ({ onAuthenticated }: { onAuthenticated: () => void }) => {
@@ -54,7 +54,9 @@ const AuthScreen = ({ onAuthenticated }: { onAuthenticated: () => void }) => {
     return (
         <View style={styles.container}>
             <Text>Please authenticate to proceed.</Text>
-            <Button title="Authenticate" onPress={handleAuthenticate} />
+            <TouchableOpacity onPress={handleAuthenticate} style={styles.authenticateButton}>
+                <Text style={{ color: "#fff" }}>Authenticate</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -64,6 +66,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
+    },
+    authenticateButton: {
+        borderRadius: 20,
+        backgroundColor: "#9575ff",
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        marginVertical: 20
     }
 })
 
