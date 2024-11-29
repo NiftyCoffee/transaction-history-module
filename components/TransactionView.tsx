@@ -25,6 +25,8 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
     ? require("../assets/transportation-icon.png")
     : require("../assets/salary-icon.png");
 
+    const arrowIcon = require("../assets/right-arrow-icon.png");
+
     /**
      * Authenticates user with biometrics by:
      * 1) Check if biometric authentication is available on the device
@@ -90,7 +92,8 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
                     <Text style={styles.category}>{transaction.category}</Text>
                     <Text style={transaction.type === "debit" ? styles.debit : styles.credit}>{transaction.type === "debit" ? "-" : "+"}$***</Text>
                 </View>
-                <Text style={styles.date}>{transaction.date.toLocaleDateString()}</Text>
+                {/* <Text style={styles.date}>{transaction.date.toLocaleDateString()}</Text> */}
+                <Image source={arrowIcon} style={{ width: 20, height: 20}} />
             </View>
         </TouchableOpacity>
     )
@@ -102,7 +105,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         maxWidth: "100%",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        minHeight: 50
     },
     container: {
         position: "relative",
