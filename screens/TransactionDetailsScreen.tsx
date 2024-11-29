@@ -6,14 +6,14 @@ const TransactionDetailsScreen = ({ route }: { route: { params: { transaction: T
 
     // Set icon based on category
     const icon = transaction.category === "Groceries"
-    ? require("../assets/groceries-icon.png")
+    ? require("../assets/icons/groceries-icon.png")
     : transaction.category === "Shopping"
-    ? require("../assets/shopping-icon.png")
+    ? require("../assets/icons/shopping-icon.png")
     : transaction.category === "Food"
-    ? require("../assets/food-icon.png")
+    ? require("../assets/icons/food-icon.png")
     : transaction.category === "Transportation"
-    ? require("../assets/transportation-icon.png")
-    : require("../assets/salary-icon.png");
+    ? require("../assets/icons/transportation-icon.png")
+    : require("../assets/icons/salary-icon.png");
 
     return (
         <View style={styles.container}>
