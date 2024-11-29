@@ -12,36 +12,28 @@ A transaction history module in built in React Native Expo.
 * Start an Emulator on Android Studio
 * Download Expo Go and scan the QR code after running `npx expo start`
 
-## iOS
+### iOS
 * Start an iOS Simulator on XCode
 * Download Expo Go and scan the QR code after running `npx expo start`
 
 ## Project Demo
 
-1. Authentication Screen
+1. Home Screen
 
-Users authenticate with biometrics before proceeding to app home page.
-[!App Screenshot](./assets/images/auth_demo_1.jpg)
+Users view a chart of their cash flow along with listings of their monthly transactions.  
+<img src="./assets/images/home_screen.jpg" alt="App Screenshot" width="200" />
 
-2. Home Screen
+2. Monthly Transaction History
 
-Users view a chart of their cash flow along with listings of their monthly transactions.
-[!App Screenshot](./assets/images/home_screen.jpg)
+Users may also scroll to view transactions of previous months.  
+<img src="./assets/images/scrollbar_demo.jpg" alt="App Screenshot" width="200" />
 
-Users may also scroll to view transactions of previous months.
-[!App Screenshot](./assets/images/scrollbar_demo.jpg)
+3. Transaction Details Screen
 
-3. Authenticate to View Details
+After authenticating to view sensitive information, users can view full details of the clicked transaction.  
+<img src="./assets/images/details_screen.jpg" alt="App Screenshot" width="200" />
 
-Further authentication is required to view sensitive information.
-[!App Screenshot](./assets/images/auth_demo_2.jpg)
+4. All Transactions Screen
 
-4. Transaction Details Screen
-
-If authentication is successful, users can view full details of the clicked transaction.
-[!App Screenshot](./assets/images/details_screen.jpg)
-
-5. All Transactions Screen
-
-Click on the "View All" button to view the full transaction history.
-[!App Screenshot](./assets/images/transaction_history_screen.jpg)
+Click on the "View All" button to view the full transaction history.  
+<img src="./assets/images/transaction_history_screen.jpg" alt="App Screenshot" width="200" />
