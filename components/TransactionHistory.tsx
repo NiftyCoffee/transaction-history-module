@@ -12,14 +12,6 @@ const TransactionHistory = ({ transactions }: { transactions: Transaction[] }) =
     ) : (
         <Text style={styles.emptyList}>No transactions this month</Text>
     );
-    // <View style={styles.container}>
-    //     {transactions.length > 0 ? 
-    //     <FlatList 
-    //     data={transactions}
-    //     renderItem={({item}) => <TransactionView transaction={item} />}
-    //     /> 
-    //     : <Text style={styles.emptyList}>No transactions this month</Text>}
-    // </View>
 }
 
 const styles = StyleSheet.create({

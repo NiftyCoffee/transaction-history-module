@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import AuthScreen from './screens/AuthScreen';
@@ -23,6 +23,10 @@ const formattedTransactions: Transaction[] = transactions.map((transaction: any)
   };
 });
 
+// Customize background color of app
+const navTheme = DefaultTheme;
+navTheme.colors.background = "#fff";
+
 export default function App() {
   // Keep track of authentication status
   const [authenticated, setAuthenticated] = useState(false);
@@ -35,7 +39,7 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={navTheme}>
       {authenticated ? (
         // If authenticated, serve home page
         <Stack.Navigator initialRouteName="Home">
