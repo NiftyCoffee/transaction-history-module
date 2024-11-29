@@ -57,9 +57,10 @@ const HomeScreen = ({ route }: { route: { params: { transactions: Transaction[] 
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
+        display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "stretch",
         backgroundColor: "#fff",
     },
     h1: {
