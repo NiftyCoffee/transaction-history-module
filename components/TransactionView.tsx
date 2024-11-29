@@ -1,7 +1,18 @@
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Transaction } from "../models/transactions";
+import { useNavigation } from "@react-navigation/native";
+import { StackParams } from "../App";
+import { NavigationProp } from "@react-navigation/native";
+
+// Define navigation type for Transaction Details screen
+type TransactionDetailsNavigationProp = NavigationProp<
+    StackParams,
+    "Transaction Details"
+>;
 
 const TransactionView = ({ transaction }: { transaction: Transaction }) => {
+    const navigation = useNavigation<TransactionDetailsNavigationProp>();
+
     // Set icon based on category
     const icon = transaction.category === "Groceries"
     ? require("../assets/groceries-icon.png")
@@ -13,8 +24,15 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
     ? require("../assets/transportation-icon.png")
     : require("../assets/salary-icon.png");
 
+    /**
+     * Go navigate to transaction details screen upon card click
+     */
+    const handleCardClick = () => {
+        navigation.navigate("Transaction Details", { transaction: transaction });
+    }
+
     return (
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={handleCardClick}>
             <Image source={icon} style={styles.icon} />
             <View style={styles.container}>
                 <View>
