@@ -78,13 +78,16 @@ const styles = StyleSheet.create({
     },
     sliderButton: {
         paddingVertical: 10,
-        paddingHorizontal: 15,
+        paddingHorizontal: 20,
         borderRadius: 20,
         marginHorizontal: 5,
     },
     selectedMonth: {
         backgroundColor: "#9575ff",
-        color: "#fff"
+        color: "#fff",
+        borderStyle: "solid",
+        borderWidth: 2,
+        borderColor: "#9575ff",
     },
     nonselectedMonth: {
         borderStyle: "solid",
