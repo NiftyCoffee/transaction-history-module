@@ -8,7 +8,7 @@ import transactions from './data/transactions.json';
 import { Transaction } from './models/transactions';
 import TransactionDetailsScreen from './screens/TransactionDetailsScreen';
 
-type StackParams = {
+export type StackParams = {
   Home: { transactions: Transaction[] };
   "Transaction Details": { transaction: Transaction };
 };
