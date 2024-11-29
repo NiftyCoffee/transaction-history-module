@@ -1,8 +1,9 @@
-import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import { Transaction } from "../models/transactions";
 import { useNavigation } from "@react-navigation/native";
 import { StackParams } from "../App";
 import { NavigationProp } from "@react-navigation/native";
+import * as LocalAuthentication from "expo-local-authentication";
 
 // Define navigation type for Transaction Details screen
 type TransactionDetailsNavigationProp = NavigationProp<
@@ -25,10 +26,60 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
     : require("../assets/salary-icon.png");
 
     /**
+     * Authenticates user with biometrics by:
+     * 1) Check if biometric authentication is available on the device
+     * 2) Check if biometric credentials are saved on the device
+     * 3) Authenticates with biometric fingerprint or face ID
+     * @returns 
+     */
+    const handleAuthenticate = async (): Promise<boolean> => {
+        try {
+            // Check if biometrics are available on the device
+            const compatible = await LocalAuthentication.hasHardwareAsync();
+            
+            if (!compatible) {
+                Alert.alert("Your device does not support biometric authentication.");
+                return false;
+            }
+
+            // Check if biometrics are enrolled on the device
+            const enrolled = await LocalAuthentication.isEnrolledAsync();
+
+            if (!enrolled) {
+                Alert.alert("No biometric credentials are enrolled on your device.");
+                return false;
+            }
+
+            // Authenticate
+            const result = await LocalAuthentication.authenticateAsync({
+                promptMessage: "Authenticate with biometrics",
+                fallbackLabel: "Use Passcode",
+            });
+
+            if (result.success) {
+                return true;
+            } else {
+                Alert.alert("Authentication failed. Please try again.");
+                return false;
+            }
+        } catch (error) {
+            console.error(error);
+            Alert.alert("An error occurred while authenticating.");
+        }
+        // False by default
+        return false;
+    }
+
+    /**
      * Go navigate to transaction details screen upon card click
      */
-    const handleCardClick = () => {
-        navigation.navigate("Transaction Details", { transaction: transaction });
+    const handleCardClick = async () => {
+        const isAuthenticated = await handleAuthenticate();
+
+        // Navigate to transaction details screen if authentication successful
+        if (isAuthenticated) {
+            navigation.navigate("Transaction Details", { transaction: transaction });
+        }
     }
 
     return (
@@ -37,7 +88,7 @@ const TransactionView = ({ transaction }: { transaction: Transaction }) => {
             <View style={styles.container}>
                 <View>
                     <Text style={styles.category}>{transaction.category}</Text>
-                    <Text style={transaction.type === "debit" ? styles.debit : styles.credit}>{transaction.type === "debit" ? "-" : "+"}${transaction.amount}.00</Text>
+                    <Text style={transaction.type === "debit" ? styles.debit : styles.credit}>{transaction.type === "debit" ? "-" : "+"}$***</Text>
                 </View>
                 <Text style={styles.date}>{transaction.date.toLocaleDateString()}</Text>
             </View>
